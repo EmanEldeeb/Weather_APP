@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app</title>
+    <link
+      rel="shortcut icon"
+      href="image/icon-wind@2x.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:wght@100;300;400;500;700&family=Titillium+Web:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/347beaf4f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-5">
+      <div class="container">
+        <a class="navbar-brand d-flex gap-3 align-items-center" href="#">
+          <img src="image/logo@2x.png" alt="logo" />
+          <div class="brand-info">
+            <h1>weather</h1>
+            <p>tagline goes here</p>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars fs-5 px-1 py-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-5 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="main_section py-5">
+      <div class="container">
+        <form class="position-relative">
+          <input
+            type="text"
+            name="findcity"
+            placeholder="find your location..."
+            id="find_city_tem"
+          />
+          <button class="btn btn-primary rounded-pill px-5" id="find_btn">
+            find
+          </button>
+        </form>
+        <div class="row mt-4 g-0">
+          <div class="col-md-4">
+            <div class="today h-100">
+              <div class="day d-flex justify-content-between">
+                <span id="today_day">monday</span>
+                <span id="today_data"
+                  ><span class="today_num">19</span
+                  ><span class="today_month">nov</span></span
+                >
+              </div>
+              <div class="today_body p-4">
+                <div class="town"></div>
+                <div class="row align-items-center">
+                  <div class="col-sm-8 col-md-12 col-lg-6">
+                    <div class="temp_degree">
+                      <span></span> <span>&#8451;</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-md-12 col-lg-6">
+                    <div class="temp_img">
+                      <img src="./image/113 (1).webp" alt="temp_image" />
+                    </div>
+                  </div>
+                </div>
+                <div class="state"></div>
+                <ul class="d-flex align-items-center gap-3">
+                  <li>
+                    <img src="./image/icon-umberella@2x.png" alt="moisture" />
+                    <span id="moisture"></span><span> %</span>
+                  </li>
+                  <li>
+                    <img src="./image/icon-wind@2x.png" alt="wind" />
+                    <span id="widn"></span><span> km/h</span>
+                  </li>
+                  <li>
+                    <img src="./image/icon-compass@2x.png" alt="direction" />
+                    <span id="direction">east</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="tomorrow text-center box h-100">
+              <div class="head">tuesday</div>
+              <div class="next_body p-5">
+                <img
+                  src="./image/113 (1).webp"
+                  alt="state"
+                  id="next_state_img"
+                />
+                <div id="max_tem_degree">
+                  <span class="tem">32 </span><span>&#8451;</span>
+                </div>
+                <div id="min_tem_degree">
+                  <span class="tem">32 </span> <span>&#8451;</span>
+                </div>
+                <div class="next_state">sunny</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="Aftertomorrow text-center box h-100">
+              <div class="head">tuesday</div>
+              <div class="next_body p-5">
+                <img
+                  src="./image/113 (1).webp"
+                  alt="state"
+                  id="next_state_img"
+                />
+                <div id="max_tem_degree">
+                  <span class="tem">32 </span> <span>&#8451;</span>
+                </div>
+                <div id="min_tem_degree">
+                  <span class="tem">32 </span> <span>&#8451;</span>
+                </div>
+                <div class="next_state">sunny</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="contact d-flex justify-content-between">
+          <form class="position-relative">
+            <input
+              type="text"
+              name="contact"
+              placeholder="Enter your email to subscribe..."
+            />
+            <button class="btn btn-primary rounded-pill px-5">subscribe</button>
+          </form>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-g"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          Copyright 2023 Company name. Designed by Themezy. All rights reserved
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
