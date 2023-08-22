@@ -124,6 +124,7 @@ ul {
 
 .main_section .today {
   background-color: var(--today-body);
+  border-radius: 10px 0 0 0;
 }
 .main_section .today .today_body {
   border-radius: 0 0 0 10px;
@@ -150,11 +151,6 @@ ul {
 
 /*--------------------------- tomorrow----------------------------- */
 
-/* .main_section .tomorrow *,
-.main_section .Aftertomorrow * {
-  color: #bfc1c8;
-  font-size: 18px;
-} */
 .main_section .box .head {
   color: #bfc1c8;
   font-size: 18px;
@@ -174,7 +170,7 @@ ul {
 
 .main_section .Aftertomorrow {
   background-color: var(--today-body);
-  border-radius: 0 0 10px 0;
+  border-radius: 0 10px 10px 0;
 }
 
 .main_section .box .next_body img {
@@ -193,14 +189,16 @@ ul {
 }
 
 @media (max-width: 991.98px) {
-  .main_section .today .day {
+  .main_section .today .day,
+  .main_section .today {
     border-radius: 10px 10px 0 0;
   }
   .main_section .today .today_body,
   .main_section .Aftertomorrow .head {
     border-radius: 0;
   }
-  .main_section .Aftertomorrow .next_body {
+  .main_section .Aftertomorrow .next_body,
+  .main_section .Aftertomorrow {
     border-radius: 0 0 10px 10px;
   }
 }

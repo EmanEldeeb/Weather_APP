@@ -21,14 +21,12 @@ forms.forEach((form) => {
 });
 
 findBtn.addEventListener("click", getCityName);
-
 findCityInput.addEventListener("input", getCityName);
 
 async function getWeather(city = "alex") {
   let url = `https://api.weatherapi.com/v1/forecast.json?key=ce4808e705394710af8222734232108&q=${city}&days=3`;
   const response = await fetch(url);
   const weatherData = await response.json();
-  console.log(weatherData);
   return weatherData;
 }
 getCityName();
@@ -40,8 +38,6 @@ async function getCityName() {
   } else {
     cityData = await getWeather("alex");
   }
-
-  console.log("errrrrrrrrr", cityData.error);
   if (!cityData.error) {
     switchTodayInfo(cityData);
     switchNextDaysInfo(cityData);
@@ -71,7 +67,6 @@ function getTodayDate() {
 
 function switchNextDaysInfo(city) {
   let nextdays = city.forecast.forecastday;
-  console.log(nextdays);
 
   for (let i = 1; i < nextdays.length; i++) {
     let nextDate = new Date(nextdays[i].date);
